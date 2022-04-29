@@ -8,6 +8,7 @@
 
 import Cocoa
 import Foundation
+import LaunchAtLogin
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDelegate {
@@ -24,6 +25,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     @IBOutlet weak var startSpotifyCheckbox: NSMenuItem!
     @IBOutlet weak var notificationsCheckbox: NSMenuItem!
     @IBOutlet weak var songLogCheckbox: NSMenuItem!
+    @IBOutlet weak var launchOnBootCheckbox: NSMenuItem!
     
     var notificationsEnabled = false
     
@@ -40,7 +42,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     }
     
     @IBAction func openProjectWebsite(_ sender: Any) {
-        openWebsite(url: "https://github.com/simonmeusel/MuteSpotifyAds")
+//        openWebsite(url: "https://github.com/simonmeusel/MuteSpotifyAds")
+        openWebsite(url: "https://github.com/CryptedBytes/MuteSpotifyAdsPlus")
     }
     
     @IBAction func openReportBugWebsite(_ sender: Any) {
@@ -90,6 +93,21 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         UserDefaults.standard.set(notificationsEnabled, forKey: notificationsKey)
     }
     
+    
+    @IBAction func toggleLaunchOnBoot(_ sender: NSMenuItem) {
+        
+        if(LaunchAtLogin.isEnabled) {
+            sender.state = .off
+            LaunchAtLogin.isEnabled = false
+        } else {
+            sender.state = .on
+            LaunchAtLogin.isEnabled = true
+        }
+        
+    }
+    
+    
+    
     @IBAction func toggleSpotifyStart(_ sender: NSMenuItem) {
         if spotifyManager!.startSpotify {
             spotifyManager?.startSpotify = false
@@ -133,8 +151,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         
         // Get application version
         let version = Bundle.main.infoDictionary!["CFBundleShortVersionString"]!
-        titleMenuItem.title = titleMenuItem.title + " v\(version)"
-        
+       // titleMenuItem.title = titleMenuItem.title + " v\(version)"
+        titleMenuItem.title = "♫ MuteSpotifyAds Plus"
         print("MuteSpotifyAds v\(version)")
         print("macOS \(ProcessInfo.processInfo.operatingSystemVersionString))")
         
@@ -142,6 +160,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
             title in
             self.setStatusBarTitle(title: title)
         })
+        
+        if(LaunchAtLogin.isEnabled) {
+            launchOnBootCheckbox.state = .on
+        } 
+        
         
         if UserDefaults.standard.bool(forKey: endlessPrivateSessionKey) {
             spotifyManager?.enablePrivateSession()

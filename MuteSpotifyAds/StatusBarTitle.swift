@@ -9,6 +9,7 @@
 import Cocoa
 
 enum StatusBarTitle: String {
-    case noAd = "☀︎"
+    //case noAd = "☀︎"
+    case noAd = "♫"
     case ad = "☂︎"
 }

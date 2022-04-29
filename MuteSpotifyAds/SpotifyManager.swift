@@ -66,7 +66,10 @@ class SpotifyManager: NSObject {
                 self.isRestarting = false
             }
         } else {
-            NSApplication.shared.terminate(self)
+            //disable self termination upon spotify quit event
+            //NSApplication.shared.terminate(self)
+            NSLog("spotify quitted. resume running.")
+            
         }
     }
     

@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		91EB7CD6281CA1B700ABC9A7 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 91EB7CD5281CA1B700ABC9A7 /* LaunchAtLogin */; };
 		F321C45820B89BBF00C504CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F321C45720B89BBF00C504CD /* AppDelegate.swift */; };
 		F321C45A20B89BC100C504CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F321C45920B89BC100C504CD /* Assets.xcassets */; };
 		F336C09320BDA27E00C757DA /* SpotifyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F336C09220BDA27E00C757DA /* SpotifyManager.swift */; };
@@ -39,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91EB7CD6281CA1B700ABC9A7 /* LaunchAtLogin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,12 +98,16 @@
 				F321C45020B89BBF00C504CD /* Sources */,
 				F321C45120B89BBF00C504CD /* Frameworks */,
 				F321C45220B89BBF00C504CD /* Resources */,
+				91EB7CD7281CA21200ABC9A7 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = MuteSpotifyAds;
+			packageProductDependencies = (
+				91EB7CD5281CA1B700ABC9A7 /* LaunchAtLogin */,
+			);
 			productName = MuteSpotifyAds;
 			productReference = F321C45420B89BBF00C504CD /* MuteSpotifyAds.app */;
 			productType = "com.apple.product-type.application";
@@ -144,6 +150,9 @@
 				es,
 			);
 			mainGroup = F321C44B20B89BBF00C504CD;
+			packageReferences = (
+				91EB7CD4281CA1B700ABC9A7 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */,
+			);
 			productRefGroup = F321C45520B89BBF00C504CD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -164,6 +173,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		91EB7CD7281CA21200ABC9A7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${BUILT_PRODUCTS_DIR}/LaunchAtLogin_LaunchAtLogin.bundle/Contents/Resources/copy-helper-swiftpm.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F321C45020B89BBF00C504CD /* Sources */ = {
@@ -378,6 +407,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		91EB7CD4281CA1B700ABC9A7 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		91EB7CD5281CA1B700ABC9A7 /* LaunchAtLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 91EB7CD4281CA1B700ABC9A7 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */;
+			productName = LaunchAtLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F321C44C20B89BBF00C504CD /* Project object */;
 }

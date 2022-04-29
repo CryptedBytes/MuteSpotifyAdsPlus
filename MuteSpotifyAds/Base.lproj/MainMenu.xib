@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="20037" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="20037"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -15,6 +15,7 @@
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="MuteSpotifyAds" customModuleProvider="target">
             <connections>
                 <outlet property="endlessPrivateSessionCheckbox" destination="o3E-lf-Jhd" id="yKp-C1-PHU"/>
+                <outlet property="launchOnBootCheckbox" destination="Yyd-gO-faK" id="nIN-8f-FQ1"/>
                 <outlet property="notificationsCheckbox" destination="xcw-JU-8Ai" id="VMH-h2-Gmq"/>
                 <outlet property="restartToSkipAdsCheckbox" destination="7pt-Ak-HDD" id="DD7-3v-iN8"/>
                 <outlet property="songLogCheckbox" destination="GPc-bM-QPt" id="Cvp-2p-C95"/>
@@ -26,10 +27,16 @@
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <menu id="KUr-cl-g3N">
             <items>
-                <menuItem title="☂︎ MuteSpotifyAds" id="Qme-N6-cSD">
+                <menuItem title="☂︎♫ MuteSpotifyAds Plus" id="Qme-N6-cSD">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="openProjectWebsite:" target="Voe-Tx-rLC" id="oYX-Ka-nYd"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="on boot" id="Yyd-gO-faK">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="toggleLaunchOnBoot:" target="Voe-Tx-rLC" id="7Bs-G6-bN1"/>
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="j8S-qT-8fQ"/>
@@ -64,25 +71,25 @@
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="q9W-ox-c2F"/>
-                <menuItem title="🔖 License" id="DTq-sR-yDf">
+                <menuItem title="🔖 License" hidden="YES" enabled="NO" id="DTq-sR-yDf">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="openLicenseWebsite:" target="Voe-Tx-rLC" id="k4s-pD-3sK"/>
                     </connections>
                 </menuItem>
-                <menuItem title="🐛 Report a bug" id="95E-eS-QXO">
+                <menuItem title="🐛 Report a bug" hidden="YES" id="95E-eS-QXO">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="openReportBugWebsite:" target="Voe-Tx-rLC" id="YMc-4Z-hHc"/>
                     </connections>
                 </menuItem>
-                <menuItem title=" ©  Simon Meusel" id="rc4-2Q-6hz">
+                <menuItem title=" ©  Simon Meusel" hidden="YES" id="rc4-2Q-6hz">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="openSimonMeuselWebsite:" target="Voe-Tx-rLC" id="u1t-RD-hoI"/>
                     </connections>
                 </menuItem>
-                <menuItem isSeparatorItem="YES" id="75F-I8-7yq"/>
+                <menuItem isSeparatorItem="YES" hidden="YES" id="75F-I8-7yq"/>
                 <menuItem title="⚠ Quit with Spotify" id="Ruj-6m-HE0">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
@@ -96,7 +103,7 @@
                     </connections>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="190" y="133"/>
+            <point key="canvasLocation" x="190" y="132.5"/>
         </menu>
     </objects>
 </document>
