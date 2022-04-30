@@ -1,7 +1,8 @@
-#  MuteSpotifyAds
+# MuteSpotifyAds+
+
 
 [![size](https://img.shields.io/badge/size-10.6%20MB-brightgreen.svg)](https://github.com/simonmeusel/MuteSpotifyAds/releases)
-[![download size](https://img.shields.io/badge/download%20size-3.3%20MB-brightgreen.svg)](https://github.com/simonmeusel/MuteSpotifyAds/releases)
+[![download size](https://img.shields.io/badge/download%20size-3.2%20MB-brightgreen.svg)](https://github.com/simonmeusel/MuteSpotifyAds/releases)
 [![macOS version support](https://img.shields.io/badge/macOS-10.12--10.15-brightgreen.svg)](https://github.com/simonmeusel/MuteSpotifyAds/releases)
 
 <p align="center"><img src="https://i.imgur.com/n12KjSw.png" height="200"></p>
@@ -12,32 +13,35 @@ This application is very CPU and power efficient, since it only checks for an ad
 
 This application is not in any way affiliated with Spotify.
 
-## Features
+This is a fork of simonmeusel's MuteSpotifyAds. Original repository is archieved and no longer maintained. This fork is enchanted with new features.
 
-* Mute ads
+## Features
+Features that are only available on this fork is marked with [Plus exclusive] 
+* Mute ads or restart Spotify to skip ads
 * Endless private session
-* Song log file
-* Restart spotify to skip ads
-* Auto-start Spotify with MuteSpotifyAds or run MuteSpotifyAds at startup
+* Log songs you listen to a log file
+* Auto-start Spotify with MuteSpotifyAds+
+* [Plus exclusive] Run MuteSpotifyAds+ at boot
+* [Plus exclusive] Keep MuteSpotifyAds+ running in the background even if Spotify is closed, so the next time you start Spotify, ads will continue to be blocked
 
 ## Usage
 
-Instead of running Spotify directly, start this application. It will automatically start Spotify. Furthermore it will mute any ads it sees. When you close Spotify this program will also terminate, and thus it no longer has any effect on your battery or CPU.
+Run the application and click on the menubar icon to access preferences. You can set it to run on system boot. After this, you can use Spotify like you normally would and MuteSpotifyAds+ will block ads in the background.
 
-As of version `1.5.0` you can also enable a option to automatically skip ads, by restarting Spoitify. Therefore, click the `☀︎` in the status bar of your mac (at the top of your screen), and then click `◎ Restart to skip ads`.
 
 ## Installation
 
 Via [homebrew](https://brew.sh/): `brew cask install mutespotifyads`
+NOTE: This will install non-plus version of MuteSpotifyAds. To install my fork with enchanted features, follow manual installation steps.
 
 Manual installation:
 
-1. Download this application from the [releases page](https://github.com/simonmeusel/MuteSpotifyAds/releases/)
+1. Download this application from the [releases page](https://github.com/CryptedBytes/MuteSpotifyAdsPlus/releases/)
 2. Move it to your Applications folder
 3. Run it using **Right Click -> Open**. You need to do this because [I don't pay Apple $99 every year](https://developer.apple.com/programs/).
-4. If you like the app, leave a [star](https://github.com/simonmeusel/MuteSpotifyAds/stargazers)!
+4. If you like the app, leave a [star](https://github.com/CryptedBytes/MuteSpotifyAdsPlus/stargazers)!
 
-This application is tested from macOS High Sierra (`10.13.5`) to and macOS Catalina (`10.15.1`) with Spotify `1.1.19.480.g7d17e3ce`.
+This application is tested from macOS High Sierra to macOS Monterey.
 
 To uninstall the application, you can simply trash `MuteSpotifyAds.app`.
 
@@ -117,9 +121,10 @@ Currently supported languages are:
 Thanks to [Carlo Federico Vescovo](https://github.com/cfvescovo) for the restart-spotify feature, the auto-start option and help with the documentation!
 Thanks to [Artem Gordinsky](https://github.com/ArtemGordinsky/) and the [other contributors](https://github.com/ArtemGordinsky/Spotifree#thanks) of [Spotifree](https://github.com/ArtemGordinsky/Spotifree)!
 Thanks to [vadian](https://stackoverflow.com/users/5044042/vadian) for the [help](https://stackoverflow.com/questions/51068410/osx-tick-menu-bar-checkbox/51068836#51068836)!
+Thanks to [Simon Meusel](https://github.com/simonmeusel "Simon Meusel") for the original MuteSpotifyAds.
 
 ## License
 
-[GNU General Public License v3.0](https://github.com/simonmeusel/MuteSpotifyAds/blob/master/LICENSE)
+[GNU General Public License v3.0](https://github.com/CryptedBytes/MuteSpotifyAdsPlus/blob/master/LICENSE)
 
-Copyright (C) 2018 Simon Meusel
+Copyright (C) 2022 Bugra Guray
