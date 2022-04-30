@@ -3,7 +3,7 @@
 
 [![size](https://img.shields.io/badge/size-10.6%20MB-brightgreen.svg)](https://github.com/simonmeusel/MuteSpotifyAds/releases)
 [![download size](https://img.shields.io/badge/download%20size-3.2%20MB-brightgreen.svg)](https://github.com/simonmeusel/MuteSpotifyAds/releases)
-[![macOS version support](https://img.shields.io/badge/macOS-10.12--10.15-brightgreen.svg)](https://github.com/simonmeusel/MuteSpotifyAds/releases)
+[![macOS version support](https://img.shields.io/badge/macOS-10.12--12.3-brightgreen.svg)](https://github.com/simonmeusel/MuteSpotifyAds/releases)
 
 <p align="center"><img src="https://i.imgur.com/n12KjSw.png" height="200"></p>
 
